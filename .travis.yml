@@ -1,9 +1,9 @@
-sudo:required
+sudo: required
 services:
   - dokcer
 
 before_install:
-  - docker build -t gester/docker-react -f Dockerfile.dev .  
+  - docker build -t gester/docker-react -f Dockerfile.dev .   
 
 script:
-  - docker run gester/docker-react npm run test -- --coverage
+  - docker run gester/docker-react npm run test -- --coverage 
